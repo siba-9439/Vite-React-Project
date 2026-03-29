@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-// base: "/aris-edu-hub/", // Uncomment for GitHub Pages deployment
+  base: "/Vite-React-Project/", 
   server: {
     host: "::",
     port: 8080,
