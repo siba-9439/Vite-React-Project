@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Vite-React-Project/", 
+  base: "/Vite-React-Project/",          // <-- Replace with your exact repo name, with slashes
   server: {
     host: "::",
     port: 8080,
@@ -19,5 +19,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+  },
+  build: {
+    outDir: "dist",
+    sourcemap: true,                      // Optional: helps debugging with source maps
   },
 }));
