@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter> {/* ✅ Wrap routes in HashRouter */}
+      <HashRouter> {/*  */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
