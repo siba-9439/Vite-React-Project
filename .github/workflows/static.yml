@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -32,13 +32,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload build files
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  
+          path: ./dist
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v5
